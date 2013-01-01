@@ -21,6 +21,7 @@ case "${OSTYPE}" in
     fi
     if [ -f $CVIMPATH ]; then
       alias cvim='$CVIMPATH'
+      alias vim='$CVIMPATH'
     fi
     if [ -f $SUBLPATH ]; then
       alias subl='$SUBLPATH'
