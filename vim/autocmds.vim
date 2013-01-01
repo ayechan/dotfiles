@@ -47,10 +47,9 @@ augroup END
 augroup vimrc_syntax
   autocmd!
   
-  autocmd FileType scala :setlocal tags+=~/scala/libsrc/tags,~/install/scala/play-2.0.3/framework/src/tags
   autocmd FileType ruby :setlocal tags+=gems.tags
   autocmd FileType php :set tabstop=4 softtabstop=4 shiftwidth=4
-  autocmd FileType python :set tabstop=4 softtabstop=4 shiftwidth=4 | setlocal tags+=~/.virtualenvs/django1/lib/python2.7/site-packages/django/tags,~/.virtualenvs/pyramid/lib/python2.7/site-packages/tags
+  autocmd FileType python :set tabstop=4 softtabstop=4 shiftwidth=4
 augroup END
 
 

@@ -5,15 +5,19 @@ set-option -g base-index 1
 # q Window を閉じる
 bind-key q kill-window 
 bind-key C-q kill-window 
+
 # x Window を入れ替える
 bind-key x swap-pane -U
 bind-key C-x swap-pane -U
+
 # a Window を追加
 bind-key a new-window
 bind-key C-a new-window
+
 # p 前の Window
 bind-key p previous-window 
 bind-key C-p previous-window
+
 # n 次の Window
 bind-key n next-window
 bind-key C-n next-window
