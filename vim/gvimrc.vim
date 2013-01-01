@@ -22,13 +22,13 @@ if has('vim_starting')
 endif
 
 colorscheme jellybeans
+set guioptions= 
 
 if has('gui_macvim')
   set guifont=Ricty_for_Powerline:h16
   set guifontwide=Ricty:h16
 endif
 
-set guioptions= 
 if has('win32') || has('win64')
   set guifont=Ricty_for_Powerline:h11
   set guifontwide=Ricty:h11
