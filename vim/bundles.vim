@@ -119,10 +119,12 @@ NeoBundle 'tpope/vim-haml'
 
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'nelstrom/vim-textobj-rubyblock'
+NeoBundle 'h1mesuke/textobj-wiw'
+NeoBundle 'kana/vim-textobj-indent'
 
 " Mapping leader shortcuts for plugins
 
-nnoremap <Leader>e :<C-u>NERDTreeToggle <return>
+nnoremap <Leader>r :<C-u>NERDTreeToggle <return>
 nnoremap <Leader>t :<C-u>TagbarToggle <return>
 vmap <Leader>, <Plug>NERDCommenterToggle
 nmap <Leader>, <Plug>NERDCommenterToggle
