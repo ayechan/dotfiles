@@ -121,6 +121,10 @@ NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'nelstrom/vim-textobj-rubyblock'
 NeoBundle 'h1mesuke/textobj-wiw'
 NeoBundle 'kana/vim-textobj-indent'
+NeoBundle 'kana/vim-textobj-line'
+NeoBundle 'kana/vim-textobj-fold'
+NeoBundle 'kana/vim-textobj-entire'
+NeoBundle 'kana/vim-textobj-syntax'
 
 " Mapping leader shortcuts for plugins
 
