@@ -35,16 +35,7 @@ nnoremap <C-w>n gt
 noremap <Leader> ,
 noremap <silent> <Leader><space> :<c-u>b#<return>
 noremap <Leader>\| :<C-u>set wrap!<return>
-noremap <Leader>sg :<C-u>source $MYGVIMRC<return>
-noremap <Leader>eg :<C-u>edit $MYGVIMRC<return>
-noremap <Leader>sv :<C-u>source $MYVIMRC<return>
-noremap <Leader>ev :<C-u>edit $MYVIMRC<return>
-noremap <Leader>evl :<C-u>edit ~/.vimrc.local<return>
-noremap <Leader>es :<C-u>edit ~/.screenrc<return>
-noremap <Leader>ez :<C-u>edit ~/.zshrc<return>
 noremap <Leader>= m`gg=G``
 noremap <Leader>q :<C-u>qall<return>
-noremap <Leader>n :<C-u>enew<return>
-noremap <Leader>w :<C-u>Write<return>
 noremap <Leader>a ggVG
 
