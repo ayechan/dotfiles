@@ -50,6 +50,7 @@ NeoBundle 'https://bitbucket.org/ns9tks/vim-l9'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'rson/vim-conque'
+NeoBundle 'akiomik/itermcolors-vim'
 NeoBundleLazy 'kana/vim-vspec'
 
 " Color Schemes
