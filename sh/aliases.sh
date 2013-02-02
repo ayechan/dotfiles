@@ -46,15 +46,15 @@ function cd() {
 
 case "${OSTYPE}" in
   linux*|cygwin*|msys*)
-    LS_DEFAULT_OPTION=--color=auto
+    LS_DEFAULT_OPTION="-F --color=auto"
     ;;
   freebsd*|darwin*)
     LS_DEFAULT_OPTION='-GwF'
     ;;
 esac
-alias l.='ls -d .* ${LS_DEFAULT_OPTION}'
-alias l='ls -lAh ${LS_DEFAULT_OPTION}'
-alias ls='ls ${LS_DEFAULT_OPTION}'
+alias l.="ls -d .* ${LS_DEFAULT_OPTION}"
+alias l="ls -lAh ${LS_DEFAULT_OPTION}"
+alias ls="ls ${LS_DEFAULT_OPTION}"
 
 case "${OSTYPE}" in
   linux*)
@@ -67,6 +67,9 @@ case "${OSTYPE}" in
   freebsd*)
     ;;
   darwin*)
+    GLS_DEFAULT_OPTION="-F --color=auto"
+    alias gls="gls $GLS_DEFAULT_OPTION"
+
     MVIMPATH=/Applications/MacVim.app/Contents/MacOS/mvim
     if [ -f $MVIMPATH ]; then
       alias mvim='$MVIMPATH'
