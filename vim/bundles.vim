@@ -82,6 +82,7 @@ NeoBundle 'tsukkee/unite-tag'
 NeoBundleLazy 'kien/ctrlp.vim'
 
 " Programming Supports
+NeoBundle 'a.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'thinca/vim-ref'
