@@ -82,6 +82,8 @@ NeoBundle 'tsukkee/unite-tag'
 NeoBundleLazy 'kien/ctrlp.vim'
 
 " Programming Supports
+NeoBundle 'epmatsw/ag.vim'
+NeoBundle 'mileszs/ack.vim'
 NeoBundle 'a.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'majutsushi/tagbar'
@@ -101,7 +103,7 @@ NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'skammer/vim-css-color'
-NeoBundle 'xlevus/vim-web-indent' "This works well for html-inlined javascripts.
+NeoBundle 'lukaszb/vim-web-indent' "This works well for html-inlined javascripts.
 NeoBundle 'jelera/vim-javascript-syntax' "This has many javascript terms.
 NeoBundle 'pangloss/vim-javascript' "This makes js coloring neat.
 NeoBundle 'kchmck/vim-coffee-script'
