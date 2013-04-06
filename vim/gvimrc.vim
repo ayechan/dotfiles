@@ -38,4 +38,9 @@ endif
 if has('multi_byte_ime')
   highlight CursorIM guifg=NONE guifg=Purple
 endif
+
+if executable('jvgrep')
+  set grepprg=jvgrep
+endif
+
 set visualbell t_vb=
