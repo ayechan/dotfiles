@@ -1,0 +1,4 @@
+*.vim -crlf
+*.bash -crlf
+*.sh -crlf
+*.zsh -crlf
