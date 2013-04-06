@@ -32,7 +32,7 @@ endif
 if has('win32') || has('win64')
   set guifont=Ricty_for_Powerline:h11
   set guifontwide=Ricty:h11
-  set guioptions+=C
+  "set guioptions+=C
 endif
 
 if has('multi_byte_ime')
