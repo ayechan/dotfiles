@@ -80,7 +80,7 @@ case "${OSTYPE}" in
       alias vim='$CVIMPATH'
     fi
 
-    SUBLPATH="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
+    SUBLPATH=/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl
     if [ -f "$SUBLPATH" ]; then
       alias subl='$SUBLPATH'
     fi
