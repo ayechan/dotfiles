@@ -63,9 +63,11 @@ case "${OSTYPE}" in
     alias ls='ls -hF --color=auto --hide="\$RECYCLE.BIN" --hide="System Volume Information" --hide="ntuser.*" --hide="NTUSER.*"'  
     alias open='cygstart'
     if [ ! -z "$GVIM_PATH" ]; then
-      GVIM_PATH_UNIX=`cygpath -u "$GVIM_PATH"`
+      GVIM_PATH_UNIX=`cygpath -au "$GVIM_PATH"`
       if [ -f "$GVIM_PATH_UNIX" ]; then
-        alias vim='"$GVIM_PATH_UNIX" --remote-tab-silent $(cygpath -aw $*)'
+        function vim {
+          "$GVIM_PATH_UNIX" --remote-tab-silent $(cygpath -aw $*) 
+        }
       fi
     fi
     ;;
