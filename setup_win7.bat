@@ -7,3 +7,4 @@ mklink %HOME%\.zshrc %HOME%\dotfiles\sh\zshrc.zsh
 mklink %HOME%\.zshenv %HOME%\dotfiles\sh\zshenv.zsh
 mklink %HOME%\.inputrc %HOME%\dotfiles\rcfiles\.inputrc
 mklink %HOME%\.bash_profile %HOME%\dotfiles\sh\bash_profile.bash
+mklink %HOME%\.bashrc %HOME%\dotfiles\sh\bashrc.bash

@@ -62,6 +62,12 @@ case "${OSTYPE}" in
   cygwin)
     alias ls='ls -hF --color=auto --hide="\$RECYCLE.BIN" --hide="System Volume Information" --hide="ntuser.*" --hide="NTUSER.*"'  
     alias open='cygstart'
+    if [ ! -z "$GVIM_PATH" ]; then
+      GVIM_PATH_UNIX=`cygpath -u "$GVIM_PATH"`
+      if [ -f "$GVIM_PATH_UNIX" ]; then
+        alias vim='"$GVIM_PATH_UNIX" --remote-tab-silen $(cygpath -aw $*)'
+      fi
+    fi
     ;;
   freebsd*)
     ;;
