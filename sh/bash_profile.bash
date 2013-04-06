@@ -13,14 +13,18 @@ if type "tmux" >/dev/null 2>&1 ; then
     exec tmux attach
   fi
 else
-  source ~/dotfiles/sh/prompt.bash
-  source ~/dotfiles/sh/keymappings.bash
-  source ~/dotfiles/sh/settings.bash
-  source ~/dotfiles/sh/env.sh
-  source ~/dotfiles/sh/aliases.sh
-  source ~/dotfiles/sh/loadvms.sh
-  if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
+  source $HOME/dotfiles/sh/prompt.bash
+  source $HOME/dotfiles/sh/keymappings.bash
+  source $HOME/dotfiles/sh/settings.bash
+  source $HOME/dotfiles/sh/env.sh
+  source $HOME/dotfiles/sh/aliases.sh
+  source $HOME/dotfiles/sh/loadvms.sh
+  # Load local file if exists
+  if [ -f $HOME/.bash_profile.local ]; then
+    source $HOME/.bash_profile.local
+  fi
+  if [ -f $HOME/.bashrc ]; then
+    source $HOME/.bashrc
   fi
 fi
 

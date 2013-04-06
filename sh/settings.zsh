@@ -32,7 +32,7 @@ setopt share_history
 setopt nullglob
 unsetopt auto_name_dirs
 
-HISTFILE=~/.histfile
+HISTFILE=$HOME/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
 WORDCHARS=

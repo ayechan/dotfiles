@@ -1,7 +1,7 @@
 if [ -z "$PS1" ]; then return ; fi
 echo "Loading .zshrc"
 
-source ~/dotfiles/sh/prompt.zsh
-source ~/dotfiles/sh/settings.zsh
-source ~/dotfiles/sh/keymappings.zsh
-source ~/dotfiles/sh/aliases.sh
+source $HOME/dotfiles/sh/prompt.zsh
+source $HOME/dotfiles/sh/settings.zsh
+source $HOME/dotfiles/sh/keymappings.zsh
+source $HOME/dotfiles/sh/aliases.sh

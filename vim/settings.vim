@@ -65,9 +65,10 @@ set smartindent   " 改行時に入力された行の末尾に合わせて次の
 
 " OSのクリップボードをレジスタ指定無しで Yank, Put 出来るようにする
 set clipboard=
-if has('unnamed')
+if has('unnamed') || has('win32') || has('win64')
   set clipboard+=unnamed
 endif
+
 if has('unnamedplus')
   set clipboard+=unnamedplus
 endif
@@ -91,3 +92,7 @@ set history=10000
 set visualbell t_vb=
 set noerrorbells "エラーメッセージの表示時にビープを鳴らさない
 
+" jvgrep が利用可能なら grep として使用する
+if executable('jvgrep')
+  set grepprg=jvgrep
+endif
