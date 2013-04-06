@@ -5,7 +5,7 @@ if [ -z "$PS1" ]; then return ; fi
 echo "Loading .bash_profile"
 
 # tmux が使えるなら tmux を利用
-if [ -z `which tmux` ] && [ -z $TMUX ] ; then
+if type "tmux" >/dev/null 2>&1 ; then
   # セッションが残っているなら復元
   if [ -z `tmux ls` ] ; then
     exec tmux

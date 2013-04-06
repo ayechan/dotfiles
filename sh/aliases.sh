@@ -65,7 +65,7 @@ case "${OSTYPE}" in
     if [ ! -z "$GVIM_PATH" ]; then
       GVIM_PATH_UNIX=`cygpath -u "$GVIM_PATH"`
       if [ -f "$GVIM_PATH_UNIX" ]; then
-        alias vim='"$GVIM_PATH_UNIX" --remote-tab-silen $(cygpath -aw $*)'
+        alias vim='"$GVIM_PATH_UNIX" --remote-tab-silent $(cygpath -aw $*)'
       fi
     fi
     ;;
