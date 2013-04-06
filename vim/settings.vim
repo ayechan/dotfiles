@@ -39,7 +39,7 @@ set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg,*.mov
 set wildignore+=*~,*.bak
 set wildignore+=*.aux,*.out,*.toc,*.spl,*.swp
 set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest,*.class,*.swf
-set wildignore+=*.pyc,*.luac,*.pyo
+set wildignore+=*.pyc,*.luac,*.pyo,*.omc
 set wildignore+=tags
 
 

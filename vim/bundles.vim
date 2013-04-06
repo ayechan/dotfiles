@@ -5,7 +5,7 @@ let g:indent_guides_auto_colors = 0
 let g:endwise_no_mappings = 1
 let g:tagbar_iconchars = ['▾', '▸']
 "let g:neobundle#log_filename = "~/.vim/neobundle.log"
-let g:NERDTreeIgnore=['\.$', '\~$', '^\.svn$', '^\.git$', '^\.hg$', 'CVS', '^__pycache__$', '.pyc$', '.jar$', '.class$']
+let g:NERDTreeIgnore=['\.$', '\~$', '^\.svn$', '^\.git$', '^\.hg$', 'CVS', '^__pycache__$', '.pyc$', '.jar$', '.omc', '.class$']
 
 let g:tagbar_type_scala = {}
 let g:tagbar_type_scala.ctagstype = 'Scala'
@@ -129,6 +129,7 @@ NeoBundle 'kana/vim-textobj-line'
 NeoBundle 'kana/vim-textobj-fold'
 NeoBundle 'kana/vim-textobj-entire'
 NeoBundle 'kana/vim-textobj-syntax'
+NeoBundle 'argtextobj.vim'
 
 " Mapping leader shortcuts for plugins
 
