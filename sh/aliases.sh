@@ -32,7 +32,6 @@ alias .....='cd ../../../../'
 alias ......='cd ../../../../../'
 
 alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-#alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
 
 alias freq='cut -f1 -d" " $HISTFILE | sort | uniq -c | sort -nr | head -n 30'
 alias sudolast='sudo !!'
@@ -81,8 +80,8 @@ case "${OSTYPE}" in
       alias vim='$CVIMPATH'
     fi
 
-    SUBLPATH=/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl
-    if [ -f $SUBLPATH ]; then
+    SUBLPATH="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
+    if [ -f "$SUBLPATH" ]; then
       alias subl='$SUBLPATH'
     fi
     ;;

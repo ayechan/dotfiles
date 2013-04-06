@@ -51,6 +51,7 @@ NeoBundle 'Shougo/vimproc'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'rson/vim-conque'
 NeoBundle 'akiomik/itermcolors-vim'
+NeoBundle 'tyru/open-browser.vim'
 NeoBundleLazy 'kana/vim-vspec'
 
 " Color Schemes
