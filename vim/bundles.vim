@@ -46,7 +46,9 @@ let g:syntastic_mode_map = { 'mode' : 'active',
 " プラグインのロード
 " Vim Utilities
 NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'https://bitbucket.org/ns9tks/vim-l9'
+if executable('hg')
+  NeoBundle 'https://bitbucket.org/ns9tks/vim-l9'
+endif
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'rson/vim-conque'
@@ -68,7 +70,9 @@ NeoBundle 'tpope/vim-endwise'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'mattn/zencoding-vim'
 NeoBundle 'kana/vim-smartinput'
-NeoBundle 'https://bitbucket.org/ns9tks/vim-autocomplpop'
+if executable('hg')
+  NeoBundle 'https://bitbucket.org/ns9tks/vim-autocomplpop'
+endif
 NeoBundle 'benjifisher/matchit.zip'
 NeoBundle 'miripiruni/CSScomb-for-Vim'
 
