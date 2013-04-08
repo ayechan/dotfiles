@@ -1,3 +1,4 @@
+#!/bin/bash
 
 bind '"\e[A": history-search-backward'
 bind '"\e[0A": history-search-backward'

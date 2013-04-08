@@ -47,6 +47,7 @@ let g:syntastic_mode_map = { 'mode' : 'active',
 " Vim Utilities
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/unite.vim'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'rson/vim-conque'
 NeoBundle 'akiomik/itermcolors-vim'
