@@ -1,3 +1,5 @@
+#!/bin/sh
+
 if [ -z "$PS1" ]; then return ; fi
 export PATH
 if [ -f "$HOME/.rvm/scripts/rvm" ] ; then

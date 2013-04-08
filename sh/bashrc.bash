@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # インタラクティブシェルではないなら実行しない
 if [ -z "$PS1" ]; then return ; fi
 

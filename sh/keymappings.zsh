@@ -1,3 +1,5 @@
+#!/bin/zsh
+#
 bindkey -e
 autoload -Uz compinit
 compinit

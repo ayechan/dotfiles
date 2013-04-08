@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 
 autoload colors && colors
 case ${UID} in
