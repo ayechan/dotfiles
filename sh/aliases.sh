@@ -70,6 +70,21 @@ case "${OSTYPE}" in
         function vim {
           "$GVIM_PATH_UNIX" --remote-tab-silent $(cygpath -aw $*) 
         }
+        function vimdiff {
+          "$GVIM_PATH_UNIX" --remote-tab-silent -c "vert diffsplit $(cygpath -w $2)" $1
+        }
+      fi
+    fi
+    if [ ! -z "$GROWL_NOTIFY_PATH" ]; then
+      GROWL_NOTIFY_PATH_UNIX=`cygpath -au "$GROWL_NOTIFY_PATH"`
+      if [ -f "$GROWL_NOTIFY_PATH_UNIX" ]; then
+        function notify {
+          $*
+          EXIT_CODE=$?
+          #case $EXIT_CODE in
+          #esac
+          "$GROWL_NOTIFY_PATH_UNIX"
+        }
       fi
     fi
     ;;
