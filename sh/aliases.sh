@@ -71,7 +71,7 @@ case "${OSTYPE}" in
           "$GVIM_PATH_UNIX" --remote-tab-silent $(cygpath -aw $*) 
         }
         function vimdiff {
-          "$GVIM_PATH_UNIX" --remote-tab-silent -c "vert diffsplit $(cygpath -w $2)" $1
+          "$GVIM_PATH_UNIX" --remote-tab-silent -c \"vert diffsplit $(cygpath -w $2)\" $(cygpath -w $1)
         }
       fi
     fi
@@ -81,9 +81,10 @@ case "${OSTYPE}" in
         function notify {
           $*
           EXIT_CODE=$?
-          #case $EXIT_CODE in
-          #esac
-          "$GROWL_NOTIFY_PATH_UNIX"
+          case $EXIT_CODE in
+            0) "$GROWL_NOTIFY_PATH_UNIX" /t:"Completed ! - $1" "$*" ;;
+            *) "$GROWL_NOTIFY_PATH_UNIX" /t:"Failed ...  - $1" "$*" ;;
+          esac
         }
       fi
     fi
