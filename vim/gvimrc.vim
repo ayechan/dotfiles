@@ -17,9 +17,9 @@ if filereadable(g:save_window_file)
   execute 'source' g:save_window_file
 endif
 
-if has('vim_starting')
-  cd ~
-endif
+"if has('vim_starting')
+  "cd ~
+"endif
 
 colorscheme jellybeans
 set guioptions= 
