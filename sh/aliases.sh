@@ -113,3 +113,7 @@ case "${OSTYPE}" in
     ;;
 esac
 
+if [ -f $HOME/dotfiles/sh/plugins/z/z.sh ]; then
+  export _Z_CMD=k
+  source $HOME/dotfiles/sh/plugins/z/z.sh
+fi

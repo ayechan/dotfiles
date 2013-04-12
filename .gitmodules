@@ -1,0 +1,3 @@
+[submodule "sh/plugins/z"]
+	path = sh/plugins/z
+	url = https://github.com/rupa/z
