@@ -9,7 +9,7 @@ echo "Loading .bash_profile"
 if type "tmux" >/dev/null 2>&1 ; then
   # セッションが残っているなら復元
   if [ -z `tmux ls` ] ; then
-    exec tmux
+    exec tmux -2
   else
     exec tmux attach
   fi
