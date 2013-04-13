@@ -7,4 +7,5 @@ fsutil hardlink create %HOME%\.zshenv %HOME%\dotfiles\sh\zshenv.zsh
 fsutil hardlink create %HOME%\.inputrc %HOME%\dotfiles\rcfiles\.inputrc
 fsutil hardlink create %HOME%\.bash_profile %HOME%\dotfiles\sh\bash_profile.bash
 fsutil hardlink create %HOME%\.bashrc %HOME%\dotfiles\sh\bashrc.bash
+fsutil hardlink create %HOME%\.dir_colors %HOME%\dotfiles\sh\.dir_colors
 

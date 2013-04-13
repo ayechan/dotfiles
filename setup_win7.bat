@@ -8,3 +8,4 @@ mklink %HOME%\.zshenv %HOME%\dotfiles\sh\zshenv.zsh
 mklink %HOME%\.inputrc %HOME%\dotfiles\rcfiles\.inputrc
 mklink %HOME%\.bash_profile %HOME%\dotfiles\sh\bash_profile.bash
 mklink %HOME%\.bashrc %HOME%\dotfiles\sh\bashrc.bash
+mklink %HOME%\.dir_colors %HOME%\dotfiles\sh\.dir_colors

@@ -27,5 +27,6 @@ ln -f -v -s $DOTFILES/rcfiles/.pryrc $HOME/.pryrc
 ln -f -v -s $DOTFILES/rcfiles/.ctags $HOME/.ctags
 ln -f -v -s $DOTFILES/rcfiles/.rspec $HOME/.rspec
 ln -f -v -s $DOTFILES/rcfiles/.inputrc $HOME/.inputrc
+ln -f -v -s $DOTFILES/rcfiles/.dir_colors $HOME/.dir_colors
 
 echo "If you would like to have local settings, put them to ~/.zshenv.local or ~/.bashrc.local"
