@@ -5,6 +5,11 @@ function! s:RestoreCursor()
   endif
 endfunction
 
+function! s:CloseUniteBufferOnEsc()
+  nmap <buffer> <ESC> <Plug>(unite_exit)
+  imap <buffer> <ESC> <Plug>(unite_exit)
+endfunction
+
 augroup vimrc_quickfx
   autocmd!
   autocmd QuickFixCmdPost [^l]* nested cwindow
@@ -46,10 +51,18 @@ augroup END
 " シンタックス毎の設定
 augroup vimrc_syntax
   autocmd!
-  
+  " Change key mappings
+  autocmd FileType unite call s:CloseUniteBufferOnEsc()
+  " Change tab settings
   autocmd FileType ruby :setlocal tags+=gems.tags
   autocmd FileType php :set tabstop=4 softtabstop=4 shiftwidth=4
   autocmd FileType python :set tabstop=4 softtabstop=4 shiftwidth=4
+  " Omnifuncs
+  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+  autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 augroup END
 
 

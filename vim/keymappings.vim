@@ -15,6 +15,7 @@ cnoremap %% <C-R>=expand('%:p:h').'/'<return>
 nnoremap <silent> <c-]> :ltag <c-r>=expand('<cword>')<return> <bar> lopen <return>$
 cnoremap <C-p> <up>
 cnoremap <C-n> <down>
+nnoremap <space> za
 
 " <C-w> でタブの操作をできるようにする
 nnoremap <C-w><C-a> :<C-u>tabnew<return>
@@ -28,7 +29,9 @@ nnoremap <C-w>n gt
 
 " リーダーキーから始まるショートカットを指定
 noremap <Leader> ,
-noremap <silent> <Leader><space> :<c-u>b#<return>
+noremap <silent> <Leader><space> :<c-u>Unite file_mru -start-insert<return>
+noremap <silent> <Leader>b :<c-u>Unite buffer -start-insert<return>
+noremap <silent> <Leader>e :<c-u>Unite file_rec -start-insert<return>
 noremap <Leader>\| :<C-u>set wrap!<return>
 noremap <Leader>q :<C-u>qall<return>
 
