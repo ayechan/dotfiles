@@ -9,8 +9,6 @@ source $HOME/dotfiles/sh/settings.bash
 source $HOME/dotfiles/sh/aliases.sh
 source $HOME/dotfiles/sh/loadvms.sh
 
-#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 if [ -e $HOME/.bashrc.local ]; then
   source $HOME/.bashrc.local
 fi
