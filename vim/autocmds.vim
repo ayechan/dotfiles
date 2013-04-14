@@ -10,12 +10,12 @@ function! s:CloseUniteBufferOnEsc()
   imap <buffer> <ESC> <Plug>(unite_exit)
 endfunction
 
-augroup vimrc_quickfx
-  autocmd!
-  autocmd QuickFixCmdPost [^l]* nested cwindow
-  autocmd QuickFixCmdPost l* nested lwindow
-  autocmd FileType qf setlocal nowrap
-augroup END
+"augroup vimrc_quickfx
+  "autocmd!
+  "autocmd QuickFixCmdPost [^l]* nested cwindow
+  "autocmd QuickFixCmdPost l* nested lwindow
+  "autocmd FileType qf setlocal nowrap
+"augroup END
 
 
 " ファイルを開いた時に、以前のカーソル位置を復元する

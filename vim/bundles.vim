@@ -49,6 +49,7 @@ let g:syntastic_mode_map = { 'mode' : 'active',
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'rson/vim-conque'
 NeoBundle 'akiomik/itermcolors-vim'
@@ -135,12 +136,6 @@ NeoBundle 'kana/vim-textobj-entire'
 NeoBundle 'kana/vim-textobj-syntax'
 NeoBundle 'argtextobj.vim'
 
-" Mapping leader shortcuts for plugins
-
-nnoremap <Leader>r :<C-u>NERDTreeToggle <return>
-nnoremap <Leader>t :<C-u>TagbarToggle <return>
-vmap <Leader>, <Plug>NERDCommenterToggle
-nmap <Leader>, <Plug>NERDCommenterToggle
 
 " Powerline の設定
 call Pl#Theme#InsertSegment('charcode', 'before', 'fileformat')
@@ -169,10 +164,10 @@ let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 
 " Define file-type dependent dictionaries.
 let g:neocomplcache_dictionary_filetype_lists = {
-    \ 'default' : '',
-    \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'
-    \ }
+      \ 'default' : '',
+      \ 'vimshell' : $HOME.'/.vimshell_hist',
+      \ 'scheme' : $HOME.'/.gosh_completions'
+      \ }
 
 " Define keyword, for minor languages
 if !exists('g:neocomplcache_keyword_patterns')
@@ -205,4 +200,14 @@ let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 
+let g:unite_enable_start_insert = 1
 
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nocolor --nogroup --column'
+  let g:unite_source_grep_recursive_opt = ''
+elseif executable('jvgrep')
+  let g:unite_source_grep_command = 'jvgrep'
+  let g:unite_source_grep_default_opts = '--exclude \.(git|svn|hg|bzr)'
+  let g:unite_source_grep_recursive_opt = '-R'
+endif
