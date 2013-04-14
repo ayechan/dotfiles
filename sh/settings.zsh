@@ -32,6 +32,7 @@ setopt pushd_ignore_dups
 setopt share_history
 # For compatibility with rvm
 setopt nullglob
+setopt noclobber
 unsetopt auto_name_dirs
 
 HISTFILE=$HOME/.histfile
