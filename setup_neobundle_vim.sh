@@ -16,6 +16,7 @@ if [ ! -d $HOME/.vim/bundle/neobundle.vim ]; then
 fi
 
 if [ -d $HOME/.vim/bundle/neobundle.vim ]; then
+  vim -c "NeoBundleClean | quit"
   vim -c "NeoBundleInstall | quit"
   if [ -d $HOME/.vim/bundle/vimproc ]; then
     pushd $HOME/.vim/bundle/vimproc
