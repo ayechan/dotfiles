@@ -30,7 +30,8 @@ nnoremap <c-w>n gt
 " リーダーキーから始まるショートカットを指定
 noremap <Leader> ,
 noremap <silent> <Leader><space> :<c-u>Unite file_mru<return>
-noremap <silent> <Leader>, <Plug>NERDCommenterToggle
+nmap <silent> <Leader>, <Plug>NERDCommenterToggle
+vmap <silent> <Leader>, <Plug>NERDCommenterToggle
 noremap <silent> <Leader>\| :<c-u>set wrap!<return>
 noremap <silent> <Leader>/ :<c-u>Unite line<return>
 noremap <silent> <Leader>b :<c-u>Unite buffer<return>
