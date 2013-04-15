@@ -104,6 +104,7 @@ NeoBundleLazy 'tpope/vim-rails'
 " Syntax files
 
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'groenewege/vim-less'
 NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'hail2u/vim-css3-syntax'
@@ -111,18 +112,19 @@ NeoBundle 'skammer/vim-css-color'
 NeoBundle 'lukaszb/vim-web-indent' "This works well for html-inlined javascripts.
 NeoBundle 'jelera/vim-javascript-syntax' "This has many javascript terms.
 NeoBundle 'pangloss/vim-javascript' "This makes js coloring neat.
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'groenewege/vim-less'
-NeoBundle 'briancollins/vim-jst' " ejs or jst
-NeoBundle 'vim-scripts/autohotkey-ahk'
 NeoBundle 'jQuery'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'briancollins/vim-jst' " ejs or jst
 NeoBundle 'nono/vim-handlebars'
 NeoBundle 'lunaru/vim-twig'
 NeoBundle 'ocim/htmljinja.vim'
+NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'vim-scripts/autohotkey-ahk'
 NeoBundle 'zaiste/tmux.vim'
 NeoBundle 'rosstimson/scala-vim-support'
 NeoBundle 'tpope/vim-cucumber'
-NeoBundle 'tpope/vim-haml'
+NeoBundle 'tpope/vim-markdown'
 
 " Text-Objects
 
