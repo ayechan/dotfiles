@@ -17,10 +17,6 @@ if filereadable(g:save_window_file)
   execute 'source' g:save_window_file
 endif
 
-"if has('vim_starting')
-  "cd ~
-"endif
-
 colorscheme jellybeans
 set guioptions= 
 
@@ -32,7 +28,9 @@ endif
 if has('win32') || has('win64')
   set guifont=Ricty_for_Powerline:h11
   set guifontwide=Ricty:h11
-  "set guioptions+=C
+  if has('vim_starting')
+    cd ~
+  endif
 endif
 
 if has('multi_byte_ime')
