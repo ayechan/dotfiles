@@ -48,19 +48,14 @@ let g:syntastic_mode_map = { 'mode' : 'active',
 " Vim Utilities
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'h1mesuke/unite-outline'
+NeoBundle 'Shougo/unite.vim', {'autoload' : {'commands' : ['Unite']}}
+NeoBundle 'h1mesuke/unite-outline', {'autoload' : {'commands' : ['Unite']}}
+NeoBundle 'tsukkee/unite-tag', {'autoload' : {'commands' : ['Unite']}}
 NeoBundle 'vim-jp/vimdoc-ja'
-NeoBundle 'rson/vim-conque'
-NeoBundle 'akiomik/itermcolors-vim'
-NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'houtsnip/vim-emacscommandline'
-NeoBundleLazy 'kana/vim-vspec'
 
 " Color Schemes
 NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'chriskempson/vim-tomorrow-theme'
-NeoBundle 'noahfrederick/Hemisu'
 
 " Editing Utilities
 NeoBundle 'glidenote/memolist.vim'
@@ -74,62 +69,49 @@ NeoBundle 'kana/vim-smartinput'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'benjifisher/matchit.zip'
-NeoBundle 'miripiruni/CSScomb-for-Vim'
+NeoBundleLazy 'miripiruni/CSScomb-for-Vim', {'autoload': {'filetypes': ['css', 'html']}}
 
 " Visual Guides
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundleLazy 'thinca/vim-fontzoom'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'mikewest/vimroom'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'tsukkee/unite-tag'
-NeoBundleLazy 'kien/ctrlp.vim'
+if has('gui_running')
+  NeoBundle 'thinca/vim-fontzoom'
+endif
 
 " Programming Supports
-NeoBundle 'epmatsw/ag.vim'
-NeoBundle 'mileszs/ack.vim'
 NeoBundle 'a.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'majutsushi/tagbar'
-NeoBundle 'thinca/vim-ref'
-NeoBundle 'taka84u9/vim-ref-ri'
-NeoBundle 'https://raw.github.com/m2ym/rsense/master/etc/rsense.vim', {'script_type' : 'plugin'}
-NeoBundle 'skwp/vim-ruby-conque'
-NeoBundle 'ecomba/vim-ruby-refactoring'
-NeoBundleLazy 'joonty/vdebug'
-NeoBundleLazy 'astashov/vim-ruby-debugger'
-NeoBundleLazy 'tpope/vim-rails'
 
 " Syntax files
 
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'groenewege/vim-less'
-NeoBundle 'cakebaker/scss-syntax.vim'
-NeoBundle 'othree/html5.vim'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'skammer/vim-css-color'
-NeoBundle 'lukaszb/vim-web-indent' "This works well for html-inlined javascripts.
-NeoBundle 'jelera/vim-javascript-syntax' "This has many javascript terms.
-NeoBundle 'pangloss/vim-javascript' "This makes js coloring neat.
-NeoBundle 'jQuery'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'briancollins/vim-jst' " ejs or jst
-NeoBundle 'nono/vim-handlebars'
-NeoBundle 'lunaru/vim-twig'
-NeoBundle 'ocim/htmljinja.vim'
-NeoBundle 'digitaltoad/vim-jade'
-NeoBundle 'tpope/vim-haml'
-NeoBundle 'vim-scripts/autohotkey-ahk'
-NeoBundle 'zaiste/tmux.vim'
-NeoBundle 'rosstimson/scala-vim-support'
-NeoBundle 'tpope/vim-cucumber'
-NeoBundle 'tpope/vim-markdown'
+NeoBundleLazy 'vim-ruby/vim-ruby', {'autoload': {'filetypes': ['ruby']}}
+NeoBundleLazy 'groenewege/vim-less', {'autoload': {'filetypes': ['less']}}
+NeoBundleLazy 'cakebaker/scss-syntax.vim', {'autoload': {'filetypes': ['scss', 'sass']}}
+NeoBundleLazy 'othree/html5.vim', {'autoload': {'filetypes': ['css', 'html']}}
+NeoBundleLazy 'hail2u/vim-css3-syntax', {'autoload': {'filetypes': ['css', 'html']}}
+NeoBundleLazy 'skammer/vim-css-color', {'autoload': {'filetypes': ['css', 'html']}}
+NeoBundleLazy 'lukaszb/vim-web-indent', {'autoload': {'filetypes': ['css', 'html']}}
+NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload': {'filetypes': ['js', 'html']}}
+NeoBundleLazy 'pangloss/vim-javascript', {'autoload': {'filetypes': ['js', 'html']}}
+NeoBundleLazy 'jQuery', {'autoload': {'filetypes': ['js', 'html']}}
+NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload': {'filetypes': ['coffee']}}
+NeoBundleLazy 'briancollins/vim-jst', {'autoload': {'filetypes': ['ejs', 'jst']}} " ejs or jst
+NeoBundleLazy 'nono/vim-handlebars', {'autoload': {'filetypes': ['handlebars', 'hbs']}}
+NeoBundleLazy 'lunaru/vim-twig', {'autoload': {'filetypes': ['twig']}}
+NeoBundleLazy 'ocim/htmljinja.vim', {'autoload': {'filetypes': ['jinja']}}
+NeoBundleLazy 'digitaltoad/vim-jade', {'autoload': {'filetypes': ['jade']}}
+NeoBundleLazy 'tpope/vim-haml', {'autoload': {'filetypes': ['haml']}}
+NeoBundleLazy 'vim-scripts/autohotkey-ahk', {'autoload': {'filetypes': ['ahk']}}
+NeoBundleLazy 'rosstimson/scala-vim-support', {'autoload': {'filetypes': ['scala']}}
+NeoBundleLazy 'tpope/vim-markdown', {'autoload': {'filetypes': ['markdown', 'md', 'mkd']}}
+NeoBundleLazy 'tpope/vim-cucumber', {'autoload': {'filetypes' : ['feature']}}
+NeoBundleLazy 'zaiste/tmux.vim', {'autoload': {'filetypes' : ['tmux', 'conf']}}
 
 " Text-Objects
 
 NeoBundle 'kana/vim-textobj-user'
-NeoBundle 'nelstrom/vim-textobj-rubyblock'
 NeoBundle 'h1mesuke/textobj-wiw'
 NeoBundle 'kana/vim-textobj-indent'
 NeoBundle 'kana/vim-textobj-line'
@@ -137,6 +119,7 @@ NeoBundle 'kana/vim-textobj-fold'
 NeoBundle 'kana/vim-textobj-entire'
 NeoBundle 'kana/vim-textobj-syntax'
 NeoBundle 'argtextobj.vim'
+NeoBundleLazy  'nelstrom/vim-textobj-rubyblock', {'autoload': {'filetypes': ['ruby']}}
 
 
 " Powerline の設定
