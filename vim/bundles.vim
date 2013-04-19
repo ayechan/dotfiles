@@ -64,10 +64,10 @@ NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'mattn/zencoding-vim'
-NeoBundle 'kana/vim-smartinput'
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neosnippet'
+NeoBundleLazy 'mattn/zencoding-vim', {'autoload' : { 'insert':1}}
+NeoBundleLazy 'kana/vim-smartinput', {'autoload' : { 'insert':1}}
+NeoBundleLazy 'Shougo/neocomplcache', {'autoload' : { 'insert':1}}
+NeoBundleLazy 'Shougo/neosnippet', {'autoload' : { 'insert':1}}
 NeoBundle 'benjifisher/matchit.zip'
 NeoBundleLazy 'miripiruni/CSScomb-for-Vim', {'autoload': {'filetypes': ['css', 'html']}}
 
