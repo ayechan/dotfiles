@@ -14,6 +14,11 @@ set list           " 不可視文字を表示
 set listchars=tab:▸\ ,eol:↲
 set ambiwidth=double
 
+" 折りたたみの設定
+set foldmethod=syntax
+set foldlevelstart=99
+set foldcolumn=1
+
 " カーソル移動関連の設定
 
 set backspace=indent,eol,start " Backspaceキーの影響範囲に制限を設けない
@@ -77,6 +82,7 @@ set mouse=a
 " Windows でもパスの区切り文字を / にする
 set shellslash
 set ttimeoutlen=125
+set helplang=ja
 " set lazyredraw
 
 " コマンドラインの設定
