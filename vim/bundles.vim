@@ -6,6 +6,11 @@ let g:NERDTreeIgnore=['\.$', '\~$', '^\.svn$', '^\.git$', '^\.hg$', 'CVS', '^__p
 let g:syntastic_mode_map = { 'mode' : 'active',
       \ 'active_filetypes' : [],
       \ 'passive_filetypes' : ['html'] }
+let g:easytags_dynamic_files = 1
+let g:easytags_auto_highlight = 0
+if has('macunix')
+  let g:easytags_cmd = '/usr/local/bin/ctags'
+endif
 " endwise {{{
 let g:endwise_no_mappings = 1
 augroup cr2endwise
@@ -142,6 +147,9 @@ endif
 NeoBundle 'a.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'majutsushi/tagbar'
+if executable('ctags')
+  NeoBundle 'xolox/vim-easytags'
+endif
 
 " Syntax files
 

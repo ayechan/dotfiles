@@ -67,4 +67,7 @@ augroup vimrc_syntax
   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 augroup END
 
-
+augroup vimrc_update_tags_on_write
+  autocmd!
+  autocmd BufWritePost * exe ":UpdateTags"
+augroup END
