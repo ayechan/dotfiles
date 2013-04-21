@@ -34,9 +34,12 @@ nmap <silent> <Leader>, <Plug>NERDCommenterToggle
 vmap <silent> <Leader>, <Plug>NERDCommenterToggle
 noremap <silent> <Leader>\| :<c-u>set wrap!<return>
 noremap <silent> <Leader>/ :<c-u>Unite line<return>
+noremap <silent> <Leader>] :<c-u>UniteWithCursorWord tag<return>
+noremap <silent> <Leader>: :<c-u>Unite history/command<return>
 noremap <silent> <Leader>b :<c-u>Unite buffer<return>
 noremap <silent> <Leader>e :<c-u>Unite file_rec<return>
 noremap <silent> <Leader>g :<c-u>Unite vimgrep<return>
+noremap <silent> <Leader>h :<c-u>UniteWithInput help<return>
 noremap <silent> <Leader>gg :<c-u>Unite grep<return>
 noremap <silent> <Leader>o :<c-u>Unite outline<return>
 noremap <silent> <Leader>p :<c-u>Unite register<return>
