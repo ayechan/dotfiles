@@ -1,6 +1,6 @@
 " プラグインを設定する {{{
 " 
-let g:neobundle#log_filename = "~/.vim/neobundle.log"
+"let g:neobundle#log_filename = "~/.vim/neobundle.log"
 let g:indent_guides_auto_colors = 0   
 let g:NERDTreeIgnore=['\.$', '\~$', '^\.svn$', '^\.git$', '^\.hg$', 'CVS', '^__pycache__$', '.pyc$', '.jar$', '.omc$', '.class$']
 let g:syntastic_mode_map = { 'mode' : 'active',
@@ -120,11 +120,12 @@ NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'benjifisher/matchit.zip'
+NeoBundle 'h1mesuke/vim-alignta'
 NeoBundleLazy 'mattn/zencoding-vim', {'autoload' : { 'insert':1}}
 NeoBundleLazy 'kana/vim-smartinput', {'autoload' : { 'insert':1}}
 NeoBundleLazy 'Shougo/neocomplcache', {'autoload' : { 'insert':1}}
 NeoBundleLazy 'Shougo/neosnippet', {'autoload' : { 'insert':1}}
-NeoBundle 'benjifisher/matchit.zip'
 NeoBundleLazy 'miripiruni/CSScomb-for-Vim', {'autoload': {'filetypes': ['css', 'html']}}
 
 " Visual Guides
