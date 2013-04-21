@@ -1,13 +1,21 @@
 " プラグインを設定する {{{
 " 
-let g:neocomplcache_enable_at_startup = 1
-let g:Powerline_symbols = 'fancy'
+let g:neobundle#log_filename = "~/.vim/neobundle.log"
 let g:indent_guides_auto_colors = 0   
-let g:endwise_no_mappings = 1
-let g:tagbar_iconchars = ['▾', '▸']
-"let g:neobundle#log_filename = "~/.vim/neobundle.log"
 let g:NERDTreeIgnore=['\.$', '\~$', '^\.svn$', '^\.git$', '^\.hg$', 'CVS', '^__pycache__$', '.pyc$', '.jar$', '.omc$', '.class$']
+let g:syntastic_mode_map = { 'mode' : 'active',
+      \ 'active_filetypes' : [],
+      \ 'passive_filetypes' : ['html'] }
+" endwise {{{
+let g:endwise_no_mappings = 1
+augroup cr2endwise
+  autocmd!
+  autocmd FileType lua,ruby,sh,zsh,vb,vbnet,aspvbs,vim imap <buffer> <CR> <CR><Plug>DiscretionaryEnd
+augroup END
+" }}}
 
+" tagbar {{{
+let g:tagbar_iconchars = ['▾', '▸']
 let g:tagbar_type_scala = {}
 let g:tagbar_type_scala.ctagstype = 'Scala'
 let g:tagbar_type_scala.kinds = [
@@ -39,12 +47,60 @@ let g:tagbar_type_scala.scope2kind = {
       \ 'class' : 'c',
       \ 'case class' : 'r'
       \ }
-
-let g:syntastic_mode_map = { 'mode' : 'active',
-      \ 'active_filetypes' : [],
-      \ 'passive_filetypes' : ['html'] }
 " }}}
-" プラグインのロード
+
+" NeoComplCache, NeoSnippet {{{
+let g:acp_enableAtStartup = 0
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_enable_camel_case_completion = 0
+let g:neocomplcache_enable_underbar_completion = 1
+let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+
+let g:neocomplcache_dictionary_filetype_lists = {
+      \ 'default' : '',
+      \ 'vimshell' : $HOME.'/.vimshell_hist',
+      \ 'scheme' : $HOME.'/.gosh_completions'
+      \ }
+
+if !exists('g:neocomplcache_keyword_patterns')
+  let g:neocomplcache_keyword_patterns = {}
+endif
+let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
+
+if !exists('g:neocomplcache_omni_patterns')
+  let g:neocomplcache_omni_patterns = {}
+endif
+let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
+let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
+
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+
+" }}}
+
+" unite.vim {{{
+
+let g:unite_enable_start_insert = 1
+
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nocolor --nogroup --column'
+  let g:unite_source_grep_recursive_opt = ''
+elseif executable('jvgrep')
+  let g:unite_source_grep_command = 'jvgrep'
+  let g:unite_source_grep_default_opts = '--exclude \.(git|svn|hg|bzr)'
+  let g:unite_source_grep_recursive_opt = '-R'
+endif
+
+" }}}
+
+" }}}
+
+" プラグインのロード {{{
 " Vim Utilities
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc'
@@ -121,78 +177,11 @@ NeoBundle 'kana/vim-textobj-syntax'
 NeoBundle 'argtextobj.vim'
 NeoBundleLazy  'nelstrom/vim-textobj-rubyblock', {'autoload': {'filetypes': ['ruby']}}
 
+" }}}
 
-" Powerline の設定
+" Powerline の設定 {{{
+let g:Powerline_symbols = 'fancy'
 call Pl#Theme#InsertSegment('charcode', 'before', 'fileformat')
 call Pl#Theme#InsertSegment('pwd', 'before', 'scrollpercent')
-augroup cr2endwise
-  autocmd!
-  autocmd FileType lua,ruby,sh,zsh,vb,vbnet,aspvbs,vim imap <buffer> <CR> <CR><Plug>DiscretionaryEnd
-augroup END
+" }}}
 
-" NeoComplCache
-
-"
-let g:acp_enableAtStartup = 0
-" Launches neocomplcache automatically on vim startup.
-let g:neocomplcache_enable_at_startup = 1
-" Use smartcase.
-let g:neocomplcache_enable_smart_case = 1
-" Use camel case completion.
-let g:neocomplcache_enable_camel_case_completion = 0
-" Use underscore completion.
-let g:neocomplcache_enable_underbar_completion = 1
-" Sets minimum char length of syntax keyword.
-let g:neocomplcache_min_syntax_length = 3
-" buffer file name pattern that locks neocomplcache. e.g. ku.vim or fuzzyfinder 
-let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-
-" Define file-type dependent dictionaries.
-let g:neocomplcache_dictionary_filetype_lists = {
-      \ 'default' : '',
-      \ 'vimshell' : $HOME.'/.vimshell_hist',
-      \ 'scheme' : $HOME.'/.gosh_completions'
-      \ }
-
-" Define keyword, for minor languages
-if !exists('g:neocomplcache_keyword_patterns')
-  let g:neocomplcache_keyword_patterns = {}
-endif
-let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
-
-" Plugin key-mappings.
-inoremap <expr><C-g>     neocomplcache#undo_completion()
-inoremap <expr><C-l>     neocomplcache#complete_common_string()
-
-inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
-inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplcache#close_popup()
-inoremap <expr><C-e>  neocomplcache#cancel_popup()
-
-
-
-" Enable heavy omni completion, which require computational power and may stall the vim. 
-if !exists('g:neocomplcache_omni_patterns')
-  let g:neocomplcache_omni_patterns = {}
-endif
-let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
-let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
-
-" Plugin key-mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-
-let g:unite_enable_start_insert = 1
-
-if executable('ag')
-  let g:unite_source_grep_command = 'ag'
-  let g:unite_source_grep_default_opts = '--nocolor --nogroup --column'
-  let g:unite_source_grep_recursive_opt = ''
-elseif executable('jvgrep')
-  let g:unite_source_grep_command = 'jvgrep'
-  let g:unite_source_grep_default_opts = '--exclude \.(git|svn|hg|bzr)'
-  let g:unite_source_grep_recursive_opt = '-R'
-endif
