@@ -59,12 +59,15 @@ augroup vimrc_syntax
   autocmd FileType ruby setlocal tags+=gems.tags
   autocmd FileType php set tabstop=4 softtabstop=4 shiftwidth=4
   autocmd FileType python set tabstop=4 softtabstop=4 shiftwidth=4
+  autocmd FileType c,cpp,cs,java,objc set cindent cst csto=O tabstop=4 softtabstop=4 shiftwidth=4
   " Omnifuncs
   autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
   autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
   autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+  autocmd FileType c set omnifunc=ccomplete#Complete
+  autocmd FileType cpp set omnifunc=cppcomplete#CompleteCPP
 augroup END
 
 augroup vimrc_update_tags_on_write

@@ -2,7 +2,7 @@
 " 
 "let g:neobundle#log_filename = "~/.vim/neobundle.log"
 let g:indent_guides_auto_colors = 0   
-let g:NERDTreeIgnore=['\.$', '\~$', '^\.svn$', '^\.git$', '^\.hg$', 'CVS', '^__pycache__$', '.pyc$', '.jar$', '.omc$', '.class$']
+let g:NERDTreeIgnore=['\.$', '\~$', '^\.svn$', '^\.git$', '^\.hg$', 'CVS', '^__pycache__$', '.pyc$', '.jar$', '.omc$', '.class$', '.o$', '.a$', '.exe$', '.dll$', '.elf$']
 let g:syntastic_mode_map = { 'mode' : 'active',
       \ 'active_filetypes' : [],
       \ 'passive_filetypes' : ['html'] }
@@ -103,6 +103,19 @@ endif
 
 " }}}
 
+" OmniCppComplete {{{
+
+let g:OmniCpp_NamespaceSearch = 1
+let g:OmniCpp_GlobalScopeSearch = 1
+let g:OmniCpp_ShowAccess = 1
+let g:OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
+let g:OmniCpp_MayCompleteDot = 1 " autocomplete after .
+let g:OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
+let g:OmniCpp_MayCompleteScope = 1 " autocomplete after ::
+"let g:OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+
+" }}}
+
 " }}}
 
 " プラグインのロード {{{
@@ -147,6 +160,7 @@ endif
 NeoBundle 'a.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'majutsushi/tagbar'
+NeoBundle 'OmniCppComplete'
 if executable('ctags')
   NeoBundle 'xolox/vim-easytags'
 endif
