@@ -130,6 +130,7 @@ NeoBundle 'thinca/vim-unite-history', {'autoload' : {'commands' : ['Unite*']}}
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'houtsnip/vim-emacscommandline'
 NeoBundle 'kana/vim-tabpagecd'
+NeoBundle 'mileszs/ack.vim'
 
 " Color Schemes
 NeoBundle 'nanotech/jellybeans.vim'

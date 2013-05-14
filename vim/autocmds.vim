@@ -57,9 +57,8 @@ augroup vimrc_syntax
   autocmd FileType vim setlocal foldmethod=marker
   " Change tab settings
   autocmd FileType ruby setlocal tags+=gems.tags
-  autocmd FileType php set tabstop=4 softtabstop=4 shiftwidth=4
-  autocmd FileType python set tabstop=4 softtabstop=4 shiftwidth=4
-  autocmd FileType c,cpp,cs,java,objc set cindent cst csto=O tabstop=4 softtabstop=4 shiftwidth=4
+  autocmd FileType php,python,lua setlocal tabstop=4 softtabstop=4 shiftwidth=4
+  autocmd FileType c,cpp,cs,java,objc setlocal cindent tabstop=4 softtabstop=4 shiftwidth=4
   " Omnifuncs
   autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
   autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
