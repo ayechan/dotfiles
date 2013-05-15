@@ -131,6 +131,7 @@ NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'houtsnip/vim-emacscommandline'
 NeoBundle 'kana/vim-tabpagecd'
 NeoBundle 'mileszs/ack.vim'
+NeoBundle 'rking/ag.vim'
 
 " Color Schemes
 NeoBundle 'nanotech/jellybeans.vim'
