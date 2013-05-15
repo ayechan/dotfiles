@@ -68,8 +68,3 @@ augroup vimrc_syntax
   autocmd FileType c set omnifunc=ccomplete#Complete
   autocmd FileType cpp set omnifunc=cppcomplete#CompleteCPP
 augroup END
-
-augroup vimrc_update_tags_on_write
-  autocmd!
-  autocmd BufWritePost * exe ":UpdateTags"
-augroup END
