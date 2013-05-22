@@ -47,3 +47,7 @@ noremap <silent> <Leader>q :<c-u>qall<return>
 noremap <silent> <Leader>r :<c-u>NERDTreeToggle <return>
 noremap <silent> <Leader>t :<c-u>TagbarToggle <return>
 noremap <silent> <Leader>u :<c-u>UniteResume<return>
+if has('multi_byte_ime') || has('xim')
+  " インサートモードからノーマルモードに移った際に IME を自動的にオフにする
+  inoremap <silent> <ESC> <ESC>:<c-u>set iminsert=0<CR>
+endif
