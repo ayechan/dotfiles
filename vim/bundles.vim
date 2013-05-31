@@ -2,7 +2,7 @@
 " 
 "let g:neobundle#log_filename = "~/.vim/neobundle.log"
 let g:indent_guides_auto_colors = 0   
-let g:NERDTreeIgnore=['\.$', '\~$', '^\.svn$', '^\.git$', '^\.hg$', 'CVS', '^__pycache__$', '\.pyc$', '\.jar$', '\.omc$', '\.class$', '\.o$', '\.a$', '\.exe$', '\.dll$', '\.elf$', '^_vim', '\.stackdump$']
+let g:NERDTreeIgnore=['\.$', '\~$', '^\.svn$', '^\.git$', '^\.hg$', 'CVS', '^__pycache__$', '\.pyc$', '\.jar$', '\.omc$', '\.class$', '\.o$', '\.a$', '\.exe$', '\.dll$', '\.elf$', '^_vim', '\.stackdump$', 'tags']
 let g:syntastic_mode_map = { 'mode' : 'active',
       \ 'active_filetypes' : [],
       \ 'passive_filetypes' : ['html'] }
