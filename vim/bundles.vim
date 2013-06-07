@@ -120,9 +120,9 @@ let g:OmniCpp_MayCompleteScope = 1 " autocomplete after ::
 
 " プラグインのロード {{{
 
-NeoBundleLazy 'thinca/singleton.vim'
+NeoBundleLazy 'thinca/vim-singleton'
 if has('clientserver')
-  NeoBundleSource 'thinca/singleton.vim'
+  NeoBundleSource 'thinca/vim-singleton'
   call singleton#enable()
 endif
 
