@@ -19,6 +19,17 @@ augroup cr2endwise
 augroup END
 " }}}
 
+" JpFixMode {{{
+  if has('kaoriya')
+    let IM_CtrlMode = 4
+    inoremap <silent> <C-j> <C-^><C-r>=IMState('FixMode')<CR>
+    augroup unite_no_im_mode
+      autocmd!
+      autocmd FileType unite,vimshell let  b:IM_CtrlBufLocal = 1
+    augroup END
+  endif
+" }}}
+
 " tagbar {{{
 let g:tagbar_iconchars = ['▾', '▸']
 let g:tagbar_type_scala = {}
@@ -140,6 +151,7 @@ NeoBundle 'kana/vim-tabpagecd'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'tyru/restart.vim'
+NeoBundle 'fuenor/im_control.vim'
 
 " Color Schemes
 NeoBundle 'nanotech/jellybeans.vim'
