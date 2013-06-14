@@ -52,3 +52,21 @@ if has('multi_byte_ime') || has('xim')
   " インサートモードからノーマルモードに移った際に IME を自動的にオフにする
   inoremap <silent> <ESC> <ESC>:<c-u>set iminsert=0<CR>
 endif
+
+" settings for very magic
+" from https://bitbucket.org/slimane/vimlabo/wiki/verymagic
+
+noremap     /       /\v
+cnoreabbrev s/      s/\v<C-r>=Eatchar()<CR>
+cnoreabbrev '<,'>s  '<,'>s/\v<C-r>=Eatchar()<CR>
+cnoreabbrev %s      %s/\v<C-r>=Eatchar()<CR>
+cnoreabbrev g/      g/\v<C-r>=Eatchar()<CR>
+cnoreabbrev v/      v/\v<C-r>=Eatchar()<CR>
+
+function! Eatchar(...)
+    let pat = (exists('a:1') && s:isString(a:1)
+    \                       ? a:1
+    \                       : '/\|\s\|\\')
+    let char = nr2char(getchar(0))
+    return char =~? pat ? '' : char
+endfunction
