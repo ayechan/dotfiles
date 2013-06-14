@@ -141,6 +141,7 @@ endif
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/unite.vim', {'autoload' : {'commands' : ['Unite*']}}
+NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'h1mesuke/unite-outline', {'autoload' : {'commands' : ['Unite*']}}
 NeoBundle 'tsukkee/unite-tag', {'autoload' : {'commands' : ['Unite*']}}
 NeoBundle 'tsukkee/unite-help', {'autoload' : {'commands' : ['Unite*']}}

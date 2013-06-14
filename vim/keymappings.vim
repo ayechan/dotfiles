@@ -39,6 +39,7 @@ noremap <silent> <Leader>: :<c-u>Unite history/command<return>
 noremap <silent> <Leader>b :<c-u>Unite buffer<return>
 noremap <silent> <Leader>d :<c-u>Unite directory_mru<return>
 noremap <silent> <Leader>e :<c-u>Unite file_rec<return>
+noremap <silent> <Leader>f :<c-u>tabnew \| VimFilerDouble<return>
 noremap <silent> <Leader>g :<c-u>Unite vimgrep<return>
 noremap <silent> <Leader>h :<c-u>UniteWithInput help<return>
 noremap <silent> <Leader>gg :<c-u>Unite grep<return>
