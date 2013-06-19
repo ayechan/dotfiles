@@ -29,6 +29,12 @@ augroup END
     augroup END
   endif
 " }}}
+"
+" VimFiler {{{
+
+let g:vimfiler_edit_action = 'tabopen'
+
+" }}}
 
 " tagbar {{{
 let g:tagbar_iconchars = ['▾', '▸']
@@ -205,7 +211,6 @@ NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload': {'filetypes': ['coffee']}
 NeoBundleLazy 'briancollins/vim-jst', {'autoload': {'filetypes': ['ejs', 'jst']}} " ejs or jst
 NeoBundleLazy 'nono/vim-handlebars', {'autoload': {'filetypes': ['handlebars', 'hbs']}}
 NeoBundleLazy 'lunaru/vim-twig', {'autoload': {'filetypes': ['twig']}}
-NeoBundleLazy 'ocim/htmljinja.vim', {'autoload': {'filetypes': ['jinja']}}
 NeoBundleLazy 'digitaltoad/vim-jade', {'autoload': {'filetypes': ['jade']}}
 NeoBundleLazy 'tpope/vim-haml', {'autoload': {'filetypes': ['haml']}}
 NeoBundleLazy 'vim-scripts/autohotkey-ahk', {'autoload': {'filetypes': ['ahk']}}
