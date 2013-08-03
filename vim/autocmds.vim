@@ -42,10 +42,10 @@ augroup END
 augroup vimrc_associate_extensions_to_filetypes
   autocmd!
   autocmd BufRead *.php.cache setfiletype php
-  "autocmd BufRead,BufNewFile *.twig set syntax=htmljinja
   autocmd BufRead,BufNewFile *.tmux set syntax=tmux
   autocmd BufRead,BufNewFile *.scss set syntax=scss
   autocmd BufRead,BufNewFile *.coffee set syntax=coffee
+  autocmd BufNewFile,BufRead *.fx,*.fxc,*.fxh,*.hlsl set ft=hlsl
 augroup END
 
 " シンタックス毎の設定

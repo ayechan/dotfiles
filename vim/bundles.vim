@@ -218,6 +218,7 @@ NeoBundleLazy 'rosstimson/scala-vim-support', {'autoload': {'filetypes': ['scala
 NeoBundleLazy 'tpope/vim-markdown', {'autoload': {'filetypes': ['markdown', 'md', 'mkd']}}
 NeoBundleLazy 'tpope/vim-cucumber', {'autoload': {'filetypes' : ['feature']}}
 NeoBundleLazy 'zaiste/tmux.vim', {'autoload': {'filetypes' : ['tmux', 'conf']}}
+NeoBundle 'beyondmarc/hlsl.vim'
 
 " Text-Objects
 
